@@ -1,7 +1,7 @@
 {
   "name": "j5",
   "dependencies": {
-    "express": "stable",
-    "johnny-five": "stable"
+    "express": "~0.1",
+    "johnny-five": "~0.1"
   }
 }
