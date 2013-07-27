@@ -1,7 +1,5 @@
 {
   "name": "j5",
-  "description": "Fun with Brian & Matt",
-  "version": "0.1",
   "dependencies": {
     "express": "stable",
     "johnny-five": "stable"
