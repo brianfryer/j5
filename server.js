@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.use(express.static(__dirname + '/public'));
 
 (function() {
   var five = require("johnny-five");
@@ -11,19 +12,14 @@ var app = express();
   });
 })();
 
-var updateColor = function(hex) {
-  theLED.color(hex);
-};
-
 app.get('/', function(req, res) {
-  var body = 'Give me a hex value!';
-  res.end(body);
+  theLED.off();
+  res.render('index');
 });
 
 app.get('/:hex', function(req, res) {
-  var hex = req.params.hex;
-  updateColor(hex);
-  res.end(hex);
+  theLED.color(req.params.hex);
+  res.end('yay!');
 });
 
 app.listen(1337);

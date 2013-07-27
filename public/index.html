@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>J5 in DA HOUSE</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div class="holder">
+      
+      <h1>What color would you like to see? </h1>
+      
+      <ul>
+        <li id="red"><span class="js-getColor" data-color="FF000">RED</span></li>
+        <li id="green"><span class="js-getColor" data-color="00FF00">GREEN</span></li>
+        <li id="blue"><span class="js-getColor" data-color="0000FF">BLUE</span></li>
+      </ul>
+
+      <h1>Or, choose your own</h1>
+
+      <form>
+        <input id="color" name="color" type="text">
+        <button type="submit">This is a button</button>
+      </form>
+
+    </div>  
+ 
+
+ <script>
+
+  $('.js-getColor').click(function() {
+    var color = this.getAttribute('data-color');
+    getColor(color);
+  });
+
+  $('button').click(function(e) {
+    e.preventDefault();
+    var color = $('#color').val();
+    getColor(color);
+  })
+
+  var getColor = function(hex) {
+    $.get('/' + hex, function(data) {
+      console.log(data);
+    });
+  }
+
+ </script>
+
+
+</body>
+</html>
