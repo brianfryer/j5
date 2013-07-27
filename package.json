@@ -4,6 +4,6 @@
   "version": "0.1",
   "dependencies": {
     "express": "stable",
-    "johnny-five": "stable",
+    "johnny-five": "stable"
   }
 }
