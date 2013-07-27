@@ -34,27 +34,48 @@
 
       <form>
         <input id="color" name="color" type="text">
-        <button type="submit">This is a button</button>
+        <button id="text-button" type="submit">This is a button</button>
       </form>
 
-    </div>  
- 
+      <form>
+        <input id="redSlider" type="range" name="points" min="0" max="255" step="1">
+        <input id="greenSlider" type="range" name="points" min="0" max="255" step="1">
+        <input id="blueSlider" type="range" name="points" min="0" max="255" step="1">
+        <button id="slider-button" type="submit">This is a button</button>
+      </form>
 
+    </div>
+ 
  <script>
 
   $('.js-getColor').click(function() {
     var color = this.getAttribute('data-color');
-    getColor(color);
+    getHexColor(color);
   });
 
-  $('button').click(function(e) {
+  $('#text-button').click(function(e) {
     e.preventDefault();
     var color = $('#color').val();
-    getColor(color);
-  })
+    getHexColor(color);
+  });
 
-  var getColor = function(hex) {
+  var getHexColor = function(hex) {
     $.get('/' + hex, function(data) {
+      console.log(data);
+    });
+  }
+
+  $('#slider-button').click(function(e) {
+    e.preventDefault();
+    var red = $('#redSlider').val();
+    var green = $('#greenSlider').val();
+    var blue = $('#blueSlider').val();
+    getRGBColor(red, green, blue);
+  });
+
+  var getRGBColor = function(red, green, blue) {
+    var RGB = red + ',' + green + ',' + blue;
+    $.get('/' + RGB, function(data) {
       console.log(data);
     });
   }
