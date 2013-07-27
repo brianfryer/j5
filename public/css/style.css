@@ -27,6 +27,16 @@ h1 {
 	margin-top: 50px;
 }
 
+.squares {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.icon {
+	font-size: 4em;
+	text-align: center;
+}
+
 ul {
 	width: 100%;
 	max-width: 1200px;
@@ -49,7 +59,7 @@ ul li span {
 }
 
 ul li span:hover {
-	color: #ecf0f1;
+	color: #34495e;
 }
 
 #red {
@@ -76,13 +86,77 @@ ul li span:hover {
 	background-color: #2980b9;
 }
 
-form {
+.brian {
 	text-align: center;
 	margin-top: 40px;
 }
 
-input[type=text] {
+.brian input[type=text] {
+	width: 70%;
 	text-align: center;
 	padding: 20px;
 	font-size: 4em;
+	float: left;
 }
+
+.brian button {
+	background-color: #bdc3c7;
+	color: #34495e;
+	border: none;
+	width: 28%;
+	padding: 20px;
+	font-size: 3em;
+	line-height: 1.5em;
+	float: right;
+}
+
+.brian button:hover {
+	color: #ecf0f1;
+	background-color: #7f8c8d;
+}
+
+.matt {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.matt fieldset {
+	width: 100%;
+	border: none;
+}
+
+#redSlider {
+	display: block;
+	width: 70%;
+	margin: 50px auto;
+}
+
+#greenSlider {
+	display: block;
+	width: 70%;
+	margin: 50px auto;
+}
+
+#blueSlider {
+	display: block;
+	width: 70%;
+	margin: 50px auto;
+}
+
+.matt button {
+	background-color: #bdc3c7;
+	color: #34495e;
+	border: none;
+	padding: 20px;
+	font-size: 3em;
+	line-height: 1.5em;
+	display: block;
+	margin: 0 auto;
+}
+
+.matt button:hover {
+	color: #ecf0f1;
+	background-color: #7f8c8d;
+}
+
+

@@ -22,27 +22,60 @@
 
     <div class="holder">
       
+      <div class="squares">
       <h1>What color would you like to see? </h1>
-      
+
+      <div class="icon">
+      <i class="icon-beaker"></i>
+      </div>
+
       <ul>
         <li id="red"><span class="js-getColor" data-color="FF000">RED</span></li>
         <li id="green"><span class="js-getColor" data-color="00FF00">GREEN</span></li>
         <li id="blue"><span class="js-getColor" data-color="0000FF">BLUE</span></li>
       </ul>
+      </div>
 
-      <h1>Or, choose your own</h1>
+      <div class="squares">
+      <h1>Or, write your own six digit color</h1>
 
-      <form>
+      <form class="brian">
         <input id="color" name="color" type="text">
-        <button id="text-button" type="submit">This is a button</button>
+        <button id="text-button" type="submit">GENERATE!</button>
       </form>
+      </div>
 
-      <form>
+
+      <div class="squares">
+
+        <br><br><br><br>
+
+      <h1>Or, choose your color from the sliders</h1>
+      
+      <form class="matt">
+        
+        <fieldset>
+        <label>
         <input id="redSlider" type="range" name="points" min="0" max="255" step="1">
+        </label>
+        </fieldset>
+
+        <fieldset>
+        <label>
         <input id="greenSlider" type="range" name="points" min="0" max="255" step="1">
+        </label>
+        </fieldset>
+
+        <fieldset>
+        <label>
         <input id="blueSlider" type="range" name="points" min="0" max="255" step="1">
-        <button id="slider-button" type="submit">This is a button</button>
+        </label>
+        </fieldset>
+
+        <button id="slider-button" type="submit">GENERATE!</button>
+
       </form>
+    </div>
 
     </div>
  
@@ -81,7 +114,6 @@
   }
 
  </script>
-
 
 </body>
 </html>
